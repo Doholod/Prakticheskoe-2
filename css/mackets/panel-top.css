@@ -1,0 +1,44 @@
+.panel-top {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+}
+
+.panel-top::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.cards {
+    display: inline-block;
+    width: 33.33%;
+}
+
+.cards-left {
+    float: left;
+}
+
+.cards-center {
+    float: left;
+}
+
+.cards-center .card:first-child {
+    height: 60px;
+}
+
+.cards-right {
+    float: right;
+}
+
+.card {
+    height: 120px;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

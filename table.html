@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Лучшие кондитерские мира</title>
+</head>
+
+<body>
+    <header>
+        <h1>Лучшие кондитерские мира</h1>
+    </header>
+    <main>
+        <p>
+            <a href="index.html">Самые высокие здания</a><br>
+            <a href="table.html"><b>Список самых высоких зданий</b></a>
+        </p>
+
+        <hr>
+        <form>
+            <details>
+                <summary>График</summary>
+                <p><b>Значение по оси OX</b></p>
+                <input type="radio" id="country" name="country" value="country">
+                <label for="country">Страна</label><br>
+
+                <input type="radio" id="city" name="city" value="city">
+                <label for="city">Город</label><br>
+
+                <p><b>Значение по оси OY</b></p>
+                <input type="checkbox" id="visitors" name="visitors" value="visitors">
+                <label for="visitors">Посетителей в год</label><br>
+
+                <input type="checkbox" id="rating" name="rating" value="rating">
+                <label for="rating">Рейтинг</label><br>
+
+                <input type="checkbox" id="revenue" name="revenue" value="revenue">
+                <label for="revenue">Доход</label><br>
+            </details>
+            <br>
+            <button type="button">Построить</button>
+        </form>
+
+        <p>Здесь будет график</p>
+
+        <details>
+            <summary>Фильтр</summary>
+            <form id="myForm">
+                <p>
+                    <label for="name_filter">Название:</label>
+                    <input type="text" id="name_filter" name="name_filter">
+                </p>
+
+                <p>
+                    <label for="country_filter">Страна:</label>
+                    <input type="text" id="country_filter" name="country_filter">
+                </p>
+
+                <p>
+                    <label for="city_filter">Город:</label>
+                    <input type="text" id="city_filter" name="city_filter">
+                </p>
+
+                <p>
+                    <label for="visitors_filter">Посетителей в месяц:</label>
+                    <input type="number" id="visitors_filter" name="visitors_filter">
+                </p>
+
+                <p>
+                    <label for="rating_filter">Рейтинг:</label>
+                    от
+                    <input type="number" id="rating_filter" name="rating_filter">
+                    до
+                    <input type="number" id="rating2_filter" name="rating2_filter">
+                </p>
+
+                <p>
+                    <label for="revenue_filter">Доход:</label>
+                    <input type="number" id="revenue_filter" name="revenue_filter">
+                </p>
+
+                <p>
+                    <label for="menu">Позиций в меню:</label>
+                    от
+                    <input type="number" id="menu" name="menu">
+                    до
+                    <input type="number" id="menu2" name="menu2">
+                </p>
+
+                <button type="button">Найти</button>
+            </form>
+        </details>
+
+        <details>
+            <summary>Сортировка</summary>
+            <form>
+                <p>
+                    <label for="first_level">Первый уровень:</label>
+                    <select id="first_level" name="first_level">
+                        <option value="">Нет</option>
+                        <option value="area_sort">Площадь</option>
+                        <option value="visitors_sort">Посетителей в месяц</option>
+                        <option value="rating_sort">Рейтинг</option>
+                        <option value="revenue_sort">Доход</option>
+                        <option value="menu_sort">Позиций в меню</option>
+                    </select>
+                    <label for="desc_first">по убыванию?</label>
+                    <input type="checkbox" id="desc_first" name="desc_first" value="desc_first">
+                </p>
+
+                <p>
+                    <label for="second_level">Второй уровень:</label>
+                    <select id="second_level" name="second_level">
+                        <option value="">Нет</option>
+                        <option value="area_sort">Площадь</option>
+                        <option value="visitors_sort">Посетителей в месяц</option>
+                        <option value="rating_sort">Рейтинг</option>
+                        <option value="revenue_sort">Доход</option>
+                        <option value="menu_sort">Позиций в меню</option>
+                    </select>
+                    <label for="desc_second">по убыванию?</label>
+                    <input type="checkbox" id="desc_second" name="desc_second" value="desc_second">
+                </p>
+
+                <p>
+                    <label for="third_level">Третий уровень:</label>
+                    <select id="third_level" name="third_level">
+                        <option value="">Нет</option>
+                        <option value="area_sort">Площадь</option>
+                        <option value="visitors_sort">Посетителей в месяц</option>
+                        <option value="rating_sort">Рейтинг</option>
+                        <option value="revenue_sort">Доход</option>
+                        <option value="menu_sort">Позиций в меню</option>
+                    </select>
+                    <label for="desc_third">по убыванию?</label>
+                    <input type="checkbox" id="desc_third" name="desc_third" value="desc_third">
+                </p>
+
+                <button type="button">Сортировать</button>
+            </form>
+        </details>
+
+        <table width="80%" border="1">
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Страна</th>
+                    <th>Город</th>
+                    <th>Площадь</th>
+                    <th>Посетителей в месяц</th>
+                    <th>Рейтинг</th>
+                    <th>Доход</th>
+                    <th>Позиций в меню</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pâtisserie Sadaharu Aoki </td>
+                    <td>Япония</td>
+                    <td>Токио</td>
+                    <td>150</td>
+                    <td>5000</td>
+                    <td>4.8</td>
+                    <td>100000</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Boulangerie Lumière</td>
+                    <td>Франция</td>
+                    <td>Париж</td>
+                    <td>120</td>
+                    <td>6200</td>
+                    <td>4.7</td>
+                    <td>98000</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Pain d'Or</td>
+                    <td>Франция</td>
+                    <td>Лион</td>
+                    <td>90</td>
+                    <td>3800</td>
+                    <td>4.5</td>
+                    <td>52000</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Maison Dupont</td>
+                    <td>Франция</td>
+                    <td>Марсель</td>
+                    <td>110</td>
+                    <td>4100</td>
+                    <td>4.4</td>
+                    <td>58000</td>
+                    <td>38</td>
+                </tr>
+                <tr>
+                    <td>Le Fournil Doré</td>
+                    <td>Франция</td>
+                    <td>Бордо</td>
+                    <td>85</td>
+                    <td>3200</td>
+                    <td>4.6</td>
+                    <td>47000</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Pâtisserie Marceau</td>
+                    <td>Франция</td>
+                    <td>Ницца</td>
+                    <td>70</td>
+                    <td>2900</td>
+                    <td>4.3</td>
+                    <td>41000</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>Bäckerei Hoffmann</td>
+                    <td>Германия</td>
+                    <td>Берлин</td>
+                    <td>140</td>
+                    <td>5400</td>
+                    <td>4.5</td>
+                    <td>62000</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Brotmanufaktur Stein</td>
+                    <td>Германия</td>
+                    <td>Мюнхен</td>
+                    <td>160</td>
+                    <td>5900</td>
+                    <td>4.6</td>
+                    <td>71000</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td>Konditorei Weber</td>
+                    <td>Германия</td>
+                    <td>Гамбург</td>
+                    <td>100</td>
+                    <td>3600</td>
+                    <td>4.4</td>
+                    <td>49000</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Backhaus Krämer</td>
+                    <td>Германия</td>
+                    <td>Кёльн</td>
+                    <td>95</td>
+                    <td>3300</td>
+                    <td>4.2</td>
+                    <td>40000</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>Kuchenwerkstatt Lenz</td>
+                    <td>Германия</td>
+                    <td>Франкфурт</td>
+                    <td>80</td>
+                    <td>3000</td>
+                    <td>4.5</td>
+                    <td>43000</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>Panificio Rossi</td>
+                    <td>Италия</td>
+                    <td>Рим</td>
+                    <td>130</td>
+                    <td>5100</td>
+                    <td>4.6</td>
+                    <td>66000</td>
+                    <td>42</td>
+                </tr>
+                <tr>
+                    <td>Pasticceria Bellini</td>
+                    <td>Италия</td>
+                    <td>Милан</td>
+                    <td>110</td>
+                    <td>4700</td>
+                    <td>4.7</td>
+                    <td>74000</td>
+                    <td>44</td>
+                </tr>
+                <tr>
+                    <td>Forno Antico</td>
+                    <td>Италия</td>
+                    <td>Флоренция</td>
+                    <td>75</td>
+                    <td>2800</td>
+                    <td>4.4</td>
+                    <td>36000</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>Dolce Vita Bakery</td>
+                    <td>Италия</td>
+                    <td>Неаполь</td>
+                    <td>90</td>
+                    <td>4200</td>
+                    <td>4.5</td>
+                    <td>51000</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <td>Pasticceria Verdi</td>
+                    <td>Италия</td>
+                    <td>Турин</td>
+                    <td>85</td>
+                    <td>3100</td>
+                    <td>4.3</td>
+                    <td>39000</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>Panadería La Espiga</td>
+                    <td>Испания</td>
+                    <td>Мадрид</td>
+                    <td>100</td>
+                    <td>4300</td>
+                    <td>4.4</td>
+                    <td>45000</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>Forn Sant Jordi</td>
+                    <td>Испания</td>
+                    <td>Барселона</td>
+                    <td>115</td>
+                    <td>5200</td>
+                    <td>4.6</td>
+                    <td>63000</td>
+                    <td>41</td>
+                </tr>
+                <tr>
+                    <td>Pastelería Dulce Sol</td>
+                    <td>Испания</td>
+                    <td>Валенсия</td>
+                    <td>80</td>
+                    <td>3400</td>
+                    <td>4.3</td>
+                    <td>38000</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Horno Andaluz</td>
+                    <td>Испания</td>
+                    <td>Севилья</td>
+                    <td>70</td>
+                    <td>2700</td>
+                    <td>4.2</td>
+                    <td>31000</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>Padaria Estrela</td>
+                    <td>Португалия</td>
+                    <td>Лиссабон</td>
+                    <td>95</td>
+                    <td>4800</td>
+                    <td>4.7</td>
+                    <td>54000</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>Pastelaria Douro</td>
+                    <td>Португалия</td>
+                    <td>Порту</td>
+                    <td>80</td>
+                    <td>3500</td>
+                    <td>4.5</td>
+                    <td>40000</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Bakkerij De Gouden Korst</td>
+                    <td>Нидерланды</td>
+                    <td>Амстердам</td>
+                    <td>90</td>
+                    <td>3900</td>
+                    <td>4.4</td>
+                    <td>50000</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>Banketbakkerij Visser</td>
+                    <td>Нидерланды</td>
+                    <td>Роттердам</td>
+                    <td>85</td>
+                    <td>3100</td>
+                    <td>4.3</td>
+                    <td>39000</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>Bakery Nordlys</td>
+                    <td>Дания</td>
+                    <td>Копенгаген</td>
+                    <td>110</td>
+                    <td>4900</td>
+                    <td>4.8</td>
+                    <td>82000</td>
+                    <td>38</td>
+                </tr>
+                <tr>
+                    <td>Bageri Havn</td>
+                    <td>Дания</td>
+                    <td>Орхус</td>
+                    <td>75</td>
+                    <td>2600</td>
+                    <td>4.4</td>
+                    <td>36000</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>Fika Bageriet</td>
+                    <td>Швеция</td>
+                    <td>Стокгольм</td>
+                    <td>95</td>
+                    <td>4400</td>
+                    <td>4.6</td>
+                    <td>64000</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>Konditori Saga</td>
+                    <td>Швеция</td>
+                    <td>Гётеборг</td>
+                    <td>80</td>
+                    <td>3000</td>
+                    <td>4.5</td>
+                    <td>42000</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>Leipomo Aurora</td>
+                    <td>Финляндия</td>
+                    <td>Хельсинки</td>
+                    <td>85</td>
+                    <td>3200</td>
+                    <td>4.5</td>
+                    <td>46000</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>Bakeri Fjord</td>
+                    <td>Норвегия</td>
+                    <td>Осло</td>
+                    <td>90</td>
+                    <td>3300</td>
+                    <td>4.6</td>
+                    <td>61000</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Cukrárna Praha</td>
+                    <td>Чехия</td>
+                    <td>Прага</td>
+                    <td>100</td>
+                    <td>4600</td>
+                    <td>4.4</td>
+                    <td>38000</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>Pekárna U Zlatého Klasu</td>
+                    <td>Чехия</td>
+                    <td>Брно</td>
+                    <td>70</td>
+                    <td>2500</td>
+                    <td>4.3</td>
+                    <td>26000</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Piekarnia Złoty Kłos</td>
+                    <td>Польша</td>
+                    <td>Варшава</td>
+                    <td>105</td>
+                    <td>4500</td>
+                    <td>4.5</td>
+                    <td>36000</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <td>Cukiernia Różana</td>
+                    <td>Польша</td>
+                    <td>Краков</td>
+                    <td>80</td>
+                    <td>3200</td>
+                    <td>4.6</td>
+                    <td>30000</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>Pékség Arany</td>
+                    <td>Венгрия</td>
+                    <td>Будапешт</td>
+                    <td>90</td>
+                    <td>3700</td>
+                    <td>4.4</td>
+                    <td>28000</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Konditorei Mozart</td>
+                    <td>Австрия</td>
+                    <td>Вена</td>
+                    <td>150</td>
+                    <td>6100</td>
+                    <td>4.7</td>
+                    <td>85000</td>
+                    <td>52</td>
+                </tr>
+                <tr>
+                    <td>Bäckerei Alpenbrot</td>
+                    <td>Австрия</td>
+                    <td>Зальцбург</td>
+                    <td>80</td>
+                    <td>2900</td>
+                    <td>4.4</td>
+                    <td>37000</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>Bäckerei Zürichsee</td>
+                    <td>Швейцария</td>
+                    <td>Цюрих</td>
+                    <td>100</td>
+                    <td>4000</td>
+                    <td>4.7</td>
+                    <td>92000</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Pâtisserie Léman</td>
+                    <td>Швейцария</td>
+                    <td>Женева</td>
+                    <td>85</td>
+                    <td>3300</td>
+                    <td>4.6</td>
+                    <td>78000</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>Bakery &amp; Co.</td>
+                    <td>Великобритания</td>
+                    <td>Лондон</td>
+                    <td>120</td>
+                    <td>5600</td>
+                    <td>4.5</td>
+                    <td>89000</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>The Crumb Room</td>
+                    <td>Великобритания</td>
+                    <td>Манчестер</td>
+                    <td>90</td>
+                    <td>3600</td>
+                    <td>4.4</td>
+                    <td>47000</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Scone &amp; Sons</td>
+                    <td>Великобритания</td>
+                    <td>Эдинбург</td>
+                    <td>70</td>
+                    <td>2800</td>
+                    <td>4.5</td>
+                    <td>38000</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>Hearth Bakehouse</td>
+                    <td>Ирландия</td>
+                    <td>Дублин</td>
+                    <td>85</td>
+                    <td>3400</td>
+                    <td>4.4</td>
+                    <td>45000</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>Золотой колос</td>
+                    <td>Россия</td>
+                    <td>Москва</td>
+                    <td>130</td>
+                    <td>6500</td>
+                    <td>4.5</td>
+                    <td>72000</td>
+                    <td>46</td>
+                </tr>
+                <tr>
+                    <td>Хлебный дом</td>
+                    <td>Россия</td>
+                    <td>Санкт-Петербург</td>
+                    <td>110</td>
+                    <td>5200</td>
+                    <td>4.6</td>
+                    <td>61000</td>
+                    <td>41</td>
+                </tr>
+                <tr>
+                    <td>Сдобная лавка</td>
+                    <td>Россия</td>
+                    <td>Казань</td>
+                    <td>80</td>
+                    <td>3600</td>
+                    <td>4.4</td>
+                    <td>33000</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>Ржаной двор</td>
+                    <td>Россия</td>
+                    <td>Екатеринбург</td>
+                    <td>90</td>
+                    <td>3800</td>
+                    <td>4.3</td>
+                    <td>34000</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Каравай</td>
+                    <td>Россия</td>
+                    <td>Новосибирск</td>
+                    <td>100</td>
+                    <td>4100</td>
+                    <td>4.2</td>
+                    <td>32000</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Пряник</td>
+                    <td>Беларусь</td>
+                    <td>Минск</td>
+                    <td>75</td>
+                    <td>3000</td>
+                    <td>4.4</td>
+                    <td>27000</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>Лавашик</td>
+                    <td>Армения</td>
+                    <td>Ереван</td>
+                    <td>60</td>
+                    <td>3300</td>
+                    <td>4.6</td>
+                    <td>22000</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Хачапури и Хлеб</td>
+                    <td>Грузия</td>
+                    <td>Тбилиси</td>
+                    <td>85</td>
+                    <td>3900</td>
+                    <td>4.7</td>
+                    <td>26000</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Fırın Altın</td>
+                    <td>Турция</td>
+                    <td>Стамбул</td>
+                    <td>140</td>
+                    <td>7200</td>
+                    <td>4.5</td>
+                    <td>55000</td>
+                    <td>44</td>
+                </tr>
+                <tr>
+                    <td>Pastane Lale</td>
+                    <td>Турция</td>
+                    <td>Анкара</td>
+                    <td>90</td>
+                    <td>3500</td>
+                    <td>4.3</td>
+                    <td>27000</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>Tatlı Sarayı</td>
+                    <td>Турция</td>
+                    <td>Измир</td>
+                    <td>100</td>
+                    <td>4000</td>
+                    <td>4.4</td>
+                    <td>30000</td>
+                    <td>38</td>
+                </tr>
+                <tr>
+                    <td>Al Noor Bakery</td>
+                    <td>ОАЭ</td>
+                    <td>Дубай</td>
+                    <td>160</td>
+                    <td>6800</td>
+                    <td>4.6</td>
+                    <td>120000</td>
+                    <td>55</td>
+                </tr>
+                <tr>
+                    <td>Dune Patisserie</td>
+                    <td>ОАЭ</td>
+                    <td>Абу-Даби</td>
+                    <td>120</td>
+                    <td>4500</td>
+                    <td>4.5</td>
+                    <td>98000</td>
+                    <td>42</td>
+                </tr>
+                <tr>
+                    <td>Layali Sweets</td>
+                    <td>Ливан</td>
+                    <td>Бейрут</td>
+                    <td>90</td>
+                    <td>3700</td>
+                    <td>4.5</td>
+                    <td>35000</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <td>Cairo Oven</td>
+                    <td>Египет</td>
+                    <td>Каир</td>
+                    <td>100</td>
+                    <td>5000</td>
+                    <td>4.2</td>
+                    <td>18000</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>Maison du Pain</td>
+                    <td>Марокко</td>
+                    <td>Марракеш</td>
+                    <td>70</td>
+                    <td>3100</td>
+                    <td>4.4</td>
+                    <td>15000</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>Atlas Bakery</td>
+                    <td>Марокко</td>
+                    <td>Касабланка</td>
+                    <td>80</td>
+                    <td>3300</td>
+                    <td>4.3</td>
+                    <td>17000</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>Jozi Bakehouse</td>
+                    <td>ЮАР</td>
+                    <td>Йоханнесбург</td>
+                    <td>95</td>
+                    <td>3400</td>
+                    <td>4.3</td>
+                    <td>29000</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Cape Crust</td>
+                    <td>ЮАР</td>
+                    <td>Кейптаун</td>
+                    <td>90</td>
+                    <td>3600</td>
+                    <td>4.6</td>
+                    <td>34000</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Lagos Loaf</td>
+                    <td>Нигерия</td>
+                    <td>Лагос</td>
+                    <td>70</td>
+                    <td>2900</td>
+                    <td>4.1</td>
+                    <td>12000</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Nairobi Bake House</td>
+                    <td>Кения</td>
+                    <td>Найроби</td>
+                    <td>65</td>
+                    <td>2400</td>
+                    <td>4.3</td>
+                    <td>11000</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Pâtisserie Sakura</td>
+                    <td>Япония</td>
+                    <td>Киото</td>
+                    <td>90</td>
+                    <td>3800</td>
+                    <td>4.7</td>
+                    <td>68000</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>Bakery Hoshino</td>
+                    <td>Япония</td>
+                    <td>Осака</td>
+                    <td>110</td>
+                    <td>5300</td>
+                    <td>4.6</td>
+                    <td>72000</td>
+                    <td>41</td>
+                </tr>
+                <tr>
+                    <td>Panya Yamato</td>
+                    <td>Япония</td>
+                    <td>Нагоя</td>
+                    <td>80</td>
+                    <td>3000</td>
+                    <td>4.4</td>
+                    <td>42000</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Boulangerie Fuji</td>
+                    <td>Япония</td>
+                    <td>Саппоро</td>
+                    <td>75</td>
+                    <td>2800</td>
+                    <td>4.5</td>
+                    <td>39000</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>Pâtisserie Haru</td>
+                    <td>Япония</td>
+                    <td>Токио</td>
+                    <td>120</td>
+                    <td>6000</td>
+                    <td>4.8</td>
+                    <td>105000</td>
+                    <td>46</td>
+                </tr>
+                <tr>
+                    <td>Bakery Hanbit</td>
+                    <td>Южная Корея</td>
+                    <td>Сеул</td>
+                    <td>130</td>
+                    <td>6400</td>
+                    <td>4.6</td>
+                    <td>78000</td>
+                    <td>44</td>
+                </tr>
+                <tr>
+                    <td>Dalkom Bread</td>
+                    <td>Южная Корея</td>
+                    <td>Пусан</td>
+                    <td>95</td>
+                    <td>3900</td>
+                    <td>4.4</td>
+                    <td>41000</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>Jinmai Bakery</td>
+                    <td>Китай</td>
+                    <td>Шанхай</td>
+                    <td>140</td>
+                    <td>7000</td>
+                    <td>4.5</td>
+                    <td>64000</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td>Tianmi Pastry</td>
+                    <td>Китай</td>
+                    <td>Пекин</td>
+                    <td>120</td>
+                    <td>6200</td>
+                    <td>4.4</td>
+                    <td>58000</td>
+                    <td>43</td>
+                </tr>
+                <tr>
+                    <td>Sweet Lotus Bakery</td>
+                    <td>Китай</td>
+                    <td>Гуанчжоу</td>
+                    <td>100</td>
+                    <td>5100</td>
+                    <td>4.3</td>
+                    <td>44000</td>
+                    <td>37</td>
+                </tr>
+                <tr>
+                    <td>Shenzhen Cream House</td>
+                    <td>Китай</td>
+                    <td>Шэньчжэнь</td>
+                    <td>90</td>
+                    <td>4600</td>
+                    <td>4.5</td>
+                    <td>49000</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Harbour Bun</td>
+                    <td>Гонконг</td>
+                    <td>Гонконг</td>
+                    <td>60</td>
+                    <td>5800</td>
+                    <td>4.6</td>
+                    <td>81000</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Taipei Pineapple Cake Co.</td>
+                    <td>Тайвань</td>
+                    <td>Тайбэй</td>
+                    <td>80</td>
+                    <td>4300</td>
+                    <td>4.7</td>
+                    <td>62000</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Singa Bakery</td>
+                    <td>Сингапур</td>
+                    <td>Сингапур</td>
+                    <td>85</td>
+                    <td>5200</td>
+                    <td>4.5</td>
+                    <td>76000</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <td>Roti Kampung</td>
+                    <td>Малайзия</td>
+                    <td>Куала-Лумпур</td>
+                    <td>70</td>
+                    <td>3800</td>
+                    <td>4.3</td>
+                    <td>21000</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>Siam Sweet Bakery</td>
+                    <td>Таиланд</td>
+                    <td>Бангкок</td>
+                    <td>90</td>
+                    <td>4700</td>
+                    <td>4.4</td>
+                    <td>28000</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>Banh Mi Saigon</td>
+                    <td>Вьетнам</td>
+                    <td>Хошимин</td>
+                    <td>40</td>
+                    <td>5500</td>
+                    <td>4.6</td>
+                    <td>14000</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Hanoi Baguette</td>
+                    <td>Вьетнам</td>
+                    <td>Ханой</td>
+                    <td>45</td>
+                    <td>4800</td>
+                    <td>4.5</td>
+                    <td>13000</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Toko Roti Melati</td>
+                    <td>Индонезия</td>
+                    <td>Джакарта</td>
+                    <td>75</td>
+                    <td>4200</td>
+                    <td>4.3</td>
+                    <td>19000</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Manila Pandesal House</td>
+                    <td>Филиппины</td>
+                    <td>Манила</td>
+                    <td>60</td>
+                    <td>3900</td>
+                    <td>4.4</td>
+                    <td>16000</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>Mumbai Bake Studio</td>
+                    <td>Индия</td>
+                    <td>Мумбаи</td>
+                    <td>85</td>
+                    <td>4500</td>
+                    <td>4.4</td>
+                    <td>24000</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Delhi Crumbs</td>
+                    <td>Индия</td>
+                    <td>Дели</td>
+                    <td>90</td>
+                    <td>4300</td>
+                    <td>4.2</td>
+                    <td>22000</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>Sydney Sourdough Co.</td>
+                    <td>Австралия</td>
+                    <td>Сидней</td>
+                    <td>100</td>
+                    <td>4100</td>
+                    <td>4.7</td>
+                    <td>70000</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>Melbourne Laminate</td>
+                    <td>Австралия</td>
+                    <td>Мельбурн</td>
+                    <td>95</td>
+                    <td>4400</td>
+                    <td>4.8</td>
+                    <td>77000</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>Kiwi Bakehouse</td>
+                    <td>Новая Зеландия</td>
+                    <td>Окленд</td>
+                    <td>80</td>
+                    <td>3100</td>
+                    <td>4.5</td>
+                    <td>43000</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>Brooklyn Rye &amp; Roll</td>
+                    <td>США</td>
+                    <td>Нью-Йорк</td>
+                    <td>110</td>
+                    <td>6300</td>
+                    <td>4.6</td>
+                    <td>96000</td>
+                    <td>39</td>
+                </tr>
+                <tr>
+                    <td>Golden Gate Bakery</td>
+                    <td>США</td>
+                    <td>Сан-Франциско</td>
+                    <td>100</td>
+                    <td>5400</td>
+                    <td>4.7</td>
+                    <td>92000</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>Windy City Pastry</td>
+                    <td>США</td>
+                    <td>Чикаго</td>
+                    <td>105</td>
+                    <td>4800</td>
+                    <td>4.4</td>
+                    <td>66000</td>
+                    <td>37</td>
+                </tr>
+                <tr>
+                    <td>Lone Star Biscuits</td>
+                    <td>США</td>
+                    <td>Хьюстон</td>
+                    <td>120</td>
+                    <td>4500</td>
+                    <td>4.3</td>
+                    <td>59000</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Bayou Beignets</td>
+                    <td>США</td>
+                    <td>Новый Орлеан</td>
+                    <td>70</td>
+                    <td>4900</td>
+                    <td>4.5</td>
+                    <td>52000</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Maple Leaf Bakery</td>
+                    <td>Канада</td>
+                    <td>Торонто</td>
+                    <td>95</td>
+                    <td>4000</td>
+                    <td>4.5</td>
+                    <td>54000</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>Boulangerie Mont-Royal</td>
+                    <td>Канада</td>
+                    <td>Монреаль</td>
+                    <td>85</td>
+                    <td>3800</td>
+                    <td>4.6</td>
+                    <td>51000</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>Pan Azteca</td>
+                    <td>Мексика</td>
+                    <td>Мехико</td>
+                    <td>110</td>
+                    <td>5600</td>
+                    <td>4.4</td>
+                    <td>33000</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Panadería Del Sol</td>
+                    <td>Аргентина</td>
+                    <td>Буэнос-Айрес</td>
+                    <td>100</td>
+                    <td>4700</td>
+                    <td>4.5</td>
+                    <td>31000</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <td>Padaria Paulista</td>
+                    <td>Бразилия</td>
+                    <td>Сан-Паулу</td>
+                    <td>130</td>
+                    <td>6100</td>
+                    <td>4.4</td>
+                    <td>46000</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Panadería Andina</td>
+                    <td>Чили</td>
+                    <td>Сантьяго</td>
+                    <td>85</td>
+                    <td>3400</td>
+                    <td>4.3</td>
+                    <td>28000</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>Pan de Lima</td>
+                    <td>Перу</td>
+                    <td>Лима</td>
+                    <td>80</td>
+                    <td>3600</td>
+                    <td>4.6</td>
+                    <td>27000</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p><i>Черданцев Егор Павлович Б9124-09.03.04(5) 2026</i></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+.panel-bottom {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.panel-bottom::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 8px;
+}
+
+.col-small {
+    width: 25%;
+}
+
+.col-wide {
+    width: 50%;
+}
+
+
+.panel-bottom .card {
+    box-sizing: border-box;
+    margin-bottom: 7px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.gray {
+    background-color: #b0bec5;
+}
+
+.peach {
+    background-color: #ffe0b2;
+}
+
+.panel-bottom .card h3 {
+    margin: 0;
+}
+
+.panel-bottom .card img {
+    display: block;
+    object-fit: cover;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.more {
+    color: #1a237e;
+    font-size: 14px;
+}
+
+.card-s {
+    height: 286px;
+    padding: 12px 18px;
+}
+
+.card-s h3 {
+    margin: 8px 0 12px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.card-s p {
+    height: 80px;
+    margin: 0;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.card-s img {
+    width: 80%;
+    height: 90px;
+    margin: 12px auto 0;
+}
+
+.card-s.peach img {
+    margin: 0 auto;
+}
+
+.card-s.peach h3 {
+    margin-top: 22px;
+}
+
+.card-s .more {
+    bottom: 12px;
+}
+
+.card-s.gray .more {
+    right: 18px;
+}
+
+.card-s.peach .more {
+    left: 18px;
+}
+
+
+.card-w {
+    height: 139px;
+    padding: 12px 16px;
+}
+
+.card-w > * {
+    float: left;
+}
+
+
+.card-w > * + * {
+    margin-left: 3%;
+}
+
+.card-w h3 {
+    width: 16%;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.card-w .text {
+    width: 52%;
+}
+
+.card-w .text p {
+    height: 64px;
+    margin: 0;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.card-w .more {
+    display: block;
+    margin-top: 6px;
+}
+
+.card-w.gray .more {
+    text-align: right;
+}
+
+.card-w.peach .more {
+    text-align: left;
+}
+
+.card-w img {
+    width: 25%;
+    height: 100px;
+}
